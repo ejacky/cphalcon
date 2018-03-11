@@ -124,7 +124,7 @@ class Random
 		}
 
 		if function_exists("\\Sodium\\randombytes_buf") {
-			return \\Sodium\\randombytes_buf(len);
+			return \Sodium\randombytes_buf(len);
 		}
 
 		if function_exists("openssl_random_pseudo_bytes") {
@@ -328,7 +328,7 @@ class Random
 
 		if function_exists("\\Sodium\\randombytes_uniform") {
 			// \Sodium\randombytes_uniform will return a random integer between 0 and len - 1
-			return \\Sodium\\randombytes_uniform(len) + 1;
+			return \Sodium\randombytes_uniform(len) + 1;
 		}
 
 		let hex = dechex(len);
